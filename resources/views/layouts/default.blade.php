@@ -563,9 +563,9 @@
                                 </div><!-- sidebar -->
                                 <div class="col-lg-6">
 
-                                @yield('content')
+                                    @yield('content')
 
-                                </div><!-- centerl meta -->
+                                </div>
                                 <div class="col-lg-3">
                                     <aside class="sidebar static">
                                         <div class="widget">
