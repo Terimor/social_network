@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="col-lg-6">
     <div class="central-meta">
         <div class="new-postbox">
             <figure>
@@ -610,5 +609,4 @@
             </div>
         </div>
     </div>
-</div>
-@endsectionu
+@endsection
