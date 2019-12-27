@@ -2,10 +2,10 @@
     <div class="user-post">
         <div class="friend-info">
             <figure>
-                <img src="{{ $post->author_avatar }}" alt="">
+                <img src="{{ $post->author->avatar }}" alt="">
             </figure>
             <div class="friend-name">
-                <ins><a href="time-line.html" title="">{{ $post->author_name }}</a></ins>
+                <ins><a href="time-line.html" title="">{{ $post->author->name }}</a></ins>
                 <span>{{ $post->date_created }}</span>
             </div>
             <div class="post-meta">
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </div>
-        @foreach ($comments as $comment)
+        @foreach ($post->comments as $comment)
             <li>
                 <div class="comet-avatar">
                     <img src="{{ $comment->author_avatar }}" alt="">
@@ -98,8 +98,6 @@
                     <p>{{ $comment->content }}</p>
                 </div>
             </li>
-        @empty
-            <p>No comments</p>
-        @endforeach 
+        @endforeach
     </div>
 </div>
