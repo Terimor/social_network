@@ -1,0 +1,15 @@
+program counter
+var
+n integer
+x real
+b boolean
+begin
+
+if a > b ? a = 4 : b = 3.5e6
+i = 20 + 1 
+do i = 1+1 while i<20
+begin
+i = 20
+end 
+read (a,d)
+end 
