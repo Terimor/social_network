@@ -10,6 +10,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public $timestamps = false;
+
     public function profile() {
         return $this->hasOne('App\Profile');
     }
