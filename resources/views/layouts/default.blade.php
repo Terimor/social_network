@@ -54,7 +54,7 @@
                     <li><span>Time Line</span>
                         <ul>
                             <li><a href="time-line.html" title="">timeline</a></li>
-                            <li><a href="timeline-friends.html" title="">timeline friends</a></li>
+                            <li><a href="{{ url('subscribes') }}" title="">timeline friends</a></li>
                             <li><a href="timeline-groups.html" title="">timeline groups</a></li>
                             <li><a href="timeline-pages.html" title="">timeline pages</a></li>
                             <li><a href="timeline-photos.html" title="">timeline photos</a></li>
@@ -231,7 +231,7 @@
                         <a href="#" title="">timeline</a>
                         <ul>
                             <li><a href="time-line.html" title="">timeline</a></li>
-                            <li><a href="timeline-friends.html" title="">timeline friends</a></li>
+                            <li><a href="{{ url('subscribes') }}" title="">timeline friends</a></li>
                             <li><a href="timeline-groups.html" title="">timeline groups</a></li>
                             <li><a href="timeline-pages.html" title="">timeline pages</a></li>
                             <li><a href="timeline-photos.html" title="">timeline photos</a></li>
@@ -462,7 +462,7 @@
                                                 </li>
                                                 <li>
                                                     <i class="ti-user"></i>
-                                                    <a href="timeline-friends.html" title="">friends</a>
+                                                    <a href="{{ url('subscribes') }}" title="">friends</a>
                                                 </li>
                                                 <li>
                                                     <i class="ti-image"></i>

@@ -6,6 +6,8 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Profile;
+use App\Action;
+
 class User_tmp {
     public $avatar = 'https://lh3.googleusercontent.com/-0dpgowxQJsk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdzmsG0vXTDn3aDUvBQCPxpRLENlg.CMID/s83-c/photo.jpg';
     public $name = "Лучший в мире за работой";
@@ -62,5 +64,19 @@ class HomeController extends Controller
             $post->attachment_photos = [];
         }
         return view('feed.feed', ['user' => $user_profile, 'posts' => $posts]);
+    }
+
+    public function subscribes(Request $request) {
+        $view_data['subscribes'] = Action::where([
+            'action' => 'subscribe',
+            'target' => $this->user->id,
+        ])->orderBy('id', 'desc')->limit(10)->get();
+
+        $view_data['subscribes'] = Action::where([
+            'action' => 'subscribe',
+            'actor' => $this->user->id,
+        ])->orderBy('id', 'desc')->limit(10)->get();
+
+        return view('subscribes.subscribes', $view_data);
     }
 }
