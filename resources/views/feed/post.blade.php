@@ -2,10 +2,10 @@
     <div class="user-post">
         <div class="friend-info">
             <figure>
-                <img src="{{ $post->author->avatar }}" alt="">
+                <img src="{{ $post->profile->avatar }}" alt="">
             </figure>
             <div class="friend-name">
-                <ins><a href="time-line.html" title="">{{ $post->author->name }}</a></ins>
+                <ins><a href="time-line.html" title="">{{ $post->profile->name }}</a></ins>
                 <span>{{ $post->date_created }}</span>
             </div>
             <div class="description">
@@ -89,7 +89,7 @@
                 </div>
                 <div class="we-comment">
                     <div class="coment-head">
-                        <h5><a href="time-line.html" title="">{{ $comment->author_name }}</a></h5>
+                        <h5><a href="time-line.html" title="">{{ $comment->profile->name }}</a></h5>
                         <span>@php echo time_elapsed_string($comment->date_created); @endphp</span>
                         @auth
                         <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>

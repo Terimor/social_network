@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    protected $with = [
+        'profile'
+    ];
+
     protected $fillable = [
         'content'
     ];

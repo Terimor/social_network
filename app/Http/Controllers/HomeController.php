@@ -55,15 +55,12 @@ class HomeController extends Controller
                 $post->save();
             }
         }
-        $user = new User_tmp();
-        $post = new Post_tmp($user);
-        $posts = Post::all();
+        $posts = Post::orderBy('id', 'DESC')->get();
         $user_profile = Profile::find(Auth::id());
         foreach($posts as &$post)
         {
-            $post->author = $user_profile;
             $post->attachment_photos = [];
         }
-        return view('feed.feed', ['user' => $user, 'posts' => $posts]);
+        return view('feed.feed', ['user' => $user_profile, 'posts' => $posts]);
     }
 }
