@@ -21,6 +21,6 @@ Route::group([
     'middleware' => 'auth:api'
 ], function () {
 
-Route::get('')
+    Route::post('profile/{profile}/posts');
 
 });
