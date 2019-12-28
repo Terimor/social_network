@@ -27,7 +27,7 @@
                     <a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
                 </span>
                 <span class="mh-text">
-                    <a href="newsfeed.html" title=""><img src="images/logo2.png" alt=""></a>
+                    <a href="/feed" title=""><img src="images/logo2.png" alt=""></a>
                 </span>
                 <span class="mh-btns-right">
                     <a class="fa fa-sliders" href="#shoppingbag"></a>
@@ -43,16 +43,12 @@
                 <ul>
                     <li><span>Home</span>
                         <ul>
-                            <li><a href="index-2.html" title="">Home Social</a></li>
-                            <li><a href="index2.html" title="">Home Social 2</a></li>
-                            <li><a href="index-company.html" title="">Home Company</a></li>
-                            <li><a href="landing.html" title="">Login page</a></li>
-                            <li><a href="logout.html" title="">Logout Page</a></li>
-                            <li><a href="newsfeed.html" title="">news feed</a></li>
+                            <li><a href="/feed" title="">news feed</a></li>
                         </ul>
                     </li>
-                    <li><span>Time Line</span>
+                    <li><span>Social</span>
                         <ul>
+<<<<<<< HEAD
                             <li><a href="time-line.html" title="">timeline</a></li>
                             <li><a href="{{ url('subscribes') }}" title="">timeline friends</a></li>
                             <li><a href="timeline-groups.html" title="">timeline groups</a></li>
@@ -65,73 +61,22 @@
                             <li><a href="people-nearby.html" title="">people nearby</a></li>
 
 
+=======
+                            <li><a href="/friends" title="">friends</a></li>
+                            <li><a href="/communities" title="">communities</a></li>
+>>>>>>> e1fc64e511b7c2e72463a97309c6d6a2b80b3265
                         </ul>
                     </li>
                     <li><span>Account Setting</span>
                         <ul>
-                            <li><a href="create-fav-page.html" title="">create fav page</a></li>
-                            <li><a href="edit-account-setting.html" title="">edit account setting</a></li>
-                            <li><a href="edit-interest.html" title="">edit-interest</a></li>
-                            <li><a href="edit-password.html" title="">edit-password</a></li>
-                            <li><a href="edit-profile-basic.html" title="">edit profile basics</a></li>
-                            <li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
-                            <li><a href="messages.html" title="">message box</a></li>
-                            <li><a href="inbox.html" title="">Inbox</a></li>
-                            <li><a href="notifications.html" title="">notifications page</a></li>
-                        </ul>
-                    </li>
-                    <li><span>forum</span>
-                        <ul>
-                            <li><a href="forum.html" title="">Forum Page</a></li>
-                            <li><a href="forums-category.html" title="">Fourm Category</a></li>
-                            <li><a href="forum-open-topic.html" title="">Forum Open Topic</a></li>
-                            <li><a href="forum-create-topic.html" title="">Forum Create Topic</a></li>
-                        </ul>
-                    </li>
-                    <li><span>Our Shop</span>
-                        <ul>
-                            <li><a href="shop.html" title="">Shop Products</a></li>
-                            <li><a href="shop-masonry.html" title="">Shop Masonry Products</a></li>
-                            <li><a href="shop-single.html" title="">Shop Detail Page</a></li>
-                            <li><a href="shop-cart.html" title="">Shop Product Cart</a></li>
-                            <li><a href="shop-checkout.html" title="">Product Checkout</a></li>
-                        </ul>
-                    </li>
-                    <li><span>Our Blog</span>
-                        <ul>
-                            <li><a href="blog-grid-wo-sidebar.html" title="">Our Blog</a></li>
-                            <li><a href="blog-grid-right-sidebar.html" title="">Blog with R-Sidebar</a></li>
-                            <li><a href="blog-grid-left-sidebar.html" title="">Blog with L-Sidebar</a></li>
-                            <li><a href="blog-masonry.html" title="">Blog Masonry Style</a></li>
-                            <li><a href="blog-list-wo-sidebar.html" title="">Blog List Style</a></li>
-                            <li><a href="blog-list-right-sidebar.html" title="">Blog List with R-Sidebar</a></li>
-                            <li><a href="blog-list-left-sidebar.html" title="">Blog List with L-Sidebar</a></li>
-                            <li><a href="blog-detail.html" title="">Blog Post Detail</a></li>
-                        </ul>
-                    </li>
-                    <li><span>Portfolio</span>
-                        <ul>
-                            <li><a href="portfolio-2colm.html" title="">Portfolio 2col</a></li>
-                            <li><a href="portfolio-3colm.html" title="">Portfolio 3col</a></li>
-                            <li><a href="portfolio-4colm.html" title="">Portfolio 4col</a></li>
-                        </ul>
-                    </li>
-                    <li><span>Support & Help</span>
-                        <ul>
-                            <li><a href="support-and-help.html" title="">Support & Help</a></li>
-                            <li><a href="support-and-help-detail.html" title="">Support & Help Detail</a></li>
-                            <li><a href="support-and-help-search-result.html" title="">Support & Help Search Result</a></li>
+                            <li><a href="create-fav-page.html" title="">edit profile</a></li>
+                            <li><a href="edit-account-setting.html" title="">edit account details</a></li>
+                            <li><a href="edit-interest.html" title="">security settings</a></li>
                         </ul>
                     </li>
                     <li><span>More pages</span>
                         <ul>
                             <li><a href="careers.html" title="">Careers</a></li>
-                            <li><a href="career-detail.html" title="">Career Detail</a></li>
-                            <li><a href="404.html" title="">404 error page</a></li>
-                            <li><a href="404-2.html" title="">404 Style2</a></li>
-                            <li><a href="faq.html" title="">faq's page</a></li>
-                            <li><a href="insights.html" title="">insights</a></li>
-                            <li><a href="knowledge-base.html" title="">knowledge base</a></li>
                         </ul>
                     </li>
                     <li><a href="about.html" title="">about</a></li>
@@ -219,53 +164,28 @@
                     <li>
                         <a href="#" title="">Home</a>
                         <ul>
-                            <li><a href="index-2.html" title="">Home Social</a></li>
-                            <li><a href="index2.html" title="">Home Social 2</a></li>
-                            <li><a href="index-company.html" title="">Home Company</a></li>
-                            <li><a href="landing.html" title="">Login page</a></li>
-                            <li><a href="logout.html" title="">Logout Page</a></li>
-                            <li><a href="newsfeed.html" title="">news feed</a></li>
+                            <li><a href="/feed" title="">news feed</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#" title="">timeline</a>
+                        <a href="#" title="">social</a>
                         <ul>
-                            <li><a href="time-line.html" title="">timeline</a></li>
-                            <li><a href="{{ url('subscribes') }}" title="">timeline friends</a></li>
-                            <li><a href="timeline-groups.html" title="">timeline groups</a></li>
-                            <li><a href="timeline-pages.html" title="">timeline pages</a></li>
-                            <li><a href="timeline-photos.html" title="">timeline photos</a></li>
-                            <li><a href="timeline-videos.html" title="">timeline videos</a></li>
-                            <li><a href="fav-page.html" title="">favourit page</a></li>
-                            <li><a href="groups.html" title="">groups page</a></li>
-                            <li><a href="page-likers.html" title="">Likes page</a></li>
-                            <li><a href="people-nearby.html" title="">people nearby</a></li>
+                            <li><a href="{{ url('subscribes') }}" title="">Subscribes</a></li>
+                            <li><a href="/communities" title="">communities</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#" title="">account settings</a>
                         <ul>
-                            <li><a href="create-fav-page.html" title="">create fav page</a></li>
-                            <li><a href="edit-account-setting.html" title="">edit account setting</a></li>
-                            <li><a href="edit-interest.html" title="">edit-interest</a></li>
-                            <li><a href="edit-password.html" title="">edit-password</a></li>
-                            <li><a href="edit-profile-basic.html" title="">edit profile basics</a></li>
-                            <li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
-                            <li><a href="messages.html" title="">message box</a></li>
-                            <li><a href="inbox.html" title="">Inbox</a></li>
-                            <li><a href="notifications.html" title="">notifications page</a></li>
+                            <li><a href="create-fav-page.html" title="">edit profile</a></li>
+                            <li><a href="edit-account-setting.html" title="">edit account details</a></li>
+                            <li><a href="edit-interest.html" title="">security settings</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#" title="">more pages</a>
                         <ul>
-                            <li><a href="404.html" title="">404 error page</a></li>
-                            <li><a href="about.html" title="">about</a></li>
-                            <li><a href="contact.html" title="">contact</a></li>
-                            <li><a href="faq.html" title="">faq's page</a></li>
-                            <li><a href="insights.html" title="">insights</a></li>
-                            <li><a href="knowledge-base.html" title="">knowledge base</a></li>
-                            <li><a href="widgets.html" title="">Widgts</a></li>
+                            <li><a href="careers.html" title="">Careers</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -282,145 +202,49 @@
                     <li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
                     <li>
                         <a href="#" title="Notification" data-ripple="">
-                            <i class="ti-bell"></i><span>20</span>
+                            <i class="ti-bell"></i><span>1</span>
                         </a>
                         <div class="dropdowns">
-                            <span>4 New Notifications</span>
+                            <span>1 New Notifications</span>
                             <ul class="drops-menu">
                                 <li>
                                     <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-1.jpg" alt="">
+                                        <img src="https://vignette.wikia.nocookie.net/stalker/images/d/d1/%D0%A1%D0%B8%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87-%D1%82%D1%87.png/revision/latest?cb=20180530164054&path-prefix=ru" alt="">
                                         <div class="mesg-meta">
-                                            <h6>sarah Loren</h6>
-                                            <span>Hi, how r u dear ...?</span>
+                                            <h6>Сидорович</h6>
+                                            <span>Иди своей дорогой сталкер</span>
                                             <i>2 min ago</i>
                                         </div>
                                     </a>
                                     <span class="tag green">New</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-2.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Jhon doe</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag red">Reply</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-3.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Andrew</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag blue">Unseen</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-4.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Tom cruse</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag">New</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-5.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Amy</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag">New</span>
                                 </li>
                             </ul>
                             <a href="notifications.html" title="" class="more-mesg">view more</a>
                         </div>
                     </li>
                     <li>
-                        <a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
+                        <a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>1</span></a>
                         <div class="dropdowns">
-                            <span>5 New Messages</span>
+                            <span>1 New Messages</span>
                             <ul class="drops-menu">
                                 <li>
                                     <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-1.jpg" alt="">
+                                        <img src="https://vignette.wikia.nocookie.net/stalker/images/9/92/%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%BE%D0%BA.png/revision/latest?cb=20120207133647&path-prefix=ru" alt="">
                                         <div class="mesg-meta">
-                                            <h6>sarah Loren</h6>
-                                            <span>Hi, how r u dear ...?</span>
+                                            <h6>Стрелок</h6>
+                                            <span>Я не знаю, правильно я поступил или нет... Наверное, никогда не узнаю... Но я сделал выбор... Надеюсь, он был верным.</span>
                                             <i>2 min ago</i>
                                         </div>
                                     </a>
                                     <span class="tag green">New</span>
                                 </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-2.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Jhon doe</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag red">Reply</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-3.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Andrew</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag blue">Unseen</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-4.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Tom cruse</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag">New</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-5.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Amy</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag">New</span>
-                                </li>
                             </ul>
                             <a href="messages.html" title="" class="more-mesg">view more</a>
                         </div>
                     </li>
-                    <li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
-                        <div class="dropdowns languages">
-                            <a href="#" title=""><i class="ti-check"></i>English</a>
-                            <a href="#" title="">Arabic</a>
-                            <a href="#" title="">Dutch</a>
-                            <a href="#" title="">French</a>
-                        </div>
-                    </li>
                 </ul>
                 <div class="user-img">
-                    <img src="images/resources/admin.jpg" alt="">
+                    <img src="{{ $user->avatar }}" alt="" width="60px">
                     <span class="status f-online"></span>
                     <div class="user-setting">
                         <a href="#" title=""><span class="status f-online"></span>online</a>
@@ -430,7 +254,12 @@
                         <a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
                         <a href="#" title=""><i class="ti-target"></i>activity log</a>
                         <a href="#" title=""><i class="ti-settings"></i>account setting</a>
-                        <a href="#" title=""><i class="ti-power-off"></i>log out</a>
+
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ti-power-off"></i>
+                                        log out</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                        </form>
                     </div>
                 </div>
                 <span class="ti-menu main-menu" data-ripple=""></span>
@@ -453,10 +282,6 @@
                                                     <a href="newsfeed.html" title="">News feed</a>
                                                 </li>
                                                 <li>
-                                                    <i class="ti-mouse-alt"></i>
-                                                    <a href="inbox.html" title="">Inbox</a>
-                                                </li>
-                                                <li>
                                                     <i class="ti-files"></i>
                                                     <a href="fav-page.html" title="">My pages</a>
                                                 </li>
@@ -465,32 +290,14 @@
                                                     <a href="{{ url('subscribes') }}" title="">friends</a>
                                                 </li>
                                                 <li>
-                                                    <i class="ti-image"></i>
-                                                    <a href="timeline-photos.html" title="">images</a>
-                                                </li>
-                                                <li>
-                                                    <i class="ti-video-camera"></i>
-                                                    <a href="timeline-videos.html" title="">videos</a>
-                                                </li>
-                                                <li>
-                                                    <i class="ti-comments-smiley"></i>
-                                                    <a href="messages.html" title="">Messages</a>
-                                                </li>
-                                                <li>
                                                     <i class="ti-bell"></i>
                                                     <a href="notifications.html" title="">Notifications</a>
                                                 </li>
                                                 <li>
-                                                    <i class="ti-share"></i>
-                                                    <a href="people-nearby.html" title="">People Nearby</a>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-bar-chart-o"></i>
-                                                    <a href="insights.html" title="">insights</a>
-                                                </li>
-                                                <li>
                                                     <i class="ti-power-off"></i>
-                                                    <a href="landing.html" title="">Logout</a>
+                                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" title="">Logout</a>
                                                 </li>
                                             </ul>
                                         </div><!-- Shortcuts -->
@@ -572,12 +379,11 @@
                                             <h4 class="widget-title">Your page</h4>
                                             <div class="your-page">
                                                 <figure>
-                                                    <a href="#" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
+                                                    <a href="#" title=""><img src="{{$user->avatar}}" alt=""></a>
                                                 </figure>
                                                 <div class="page-meta">
-                                                    <a href="#" title="" class="underline">My page</a>
-                                                    <span><i class="ti-comment"></i><a href="insight.html" title="">Messages <em>9</em></a></span>
-                                                    <span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>2</em></a></span>
+                                                    <a href="#" title="" class="underline">{{$user->name}}</a>
+                                                    <span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>0</em></a></span>
                                                 </div>
                                                 <div class="page-likes">
                                                     <ul class="nav nav-tabs likes-btn">
@@ -644,22 +450,6 @@
                                                 </div>
                                             </div>
                                         </div><!-- page like widget -->
-                                        <div class="widget">
-                                            <div class="banner medium-opacity bluesh">
-                                                <div class="bg-image" style="background-image: url(images/resources/baner-widgetbg.jpg)"></div>
-                                                <div class="baner-top">
-                                                    <span><img alt="" src="images/book-icon.png"></span>
-                                                    <i class="fa fa-ellipsis-h"></i>
-                                                </div>
-                                                <div class="banermeta">
-                                                    <p>
-                                                        create your own favourit page.
-                                                    </p>
-                                                    <span>like them all</span>
-                                                    <a data-ripple="" title="" href="#">start now!</a>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="widget friend-list stick-widget">
                                             <h4 class="widget-title">Friends</h4>
                                             <div id="searchDir"></div>
@@ -832,98 +622,11 @@
             </div>
         </section>
 
-        <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <div class="widget">
-                            <div class="foot-logo">
-                                <div class="logo">
-                                    <a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
-                                </div>
-                                <p>
-                                    The trio took this simple idea and built it into the world’s leading carpooling platform.
-                                </p>
-                            </div>
-                            <ul class="location">
-                                <li>
-                                    <i class="ti-map-alt"></i>
-                                    <p>33 new montgomery st.750 san francisco, CA USA 94105.</p>
-                                </li>
-                                <li>
-                                    <i class="ti-mobile"></i>
-                                    <p>+1-56-346 345</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4">
-                        <div class="widget">
-                            <div class="widget-title">
-                                <h4>follow</h4>
-                            </div>
-                            <ul class="list-style">
-                                <li><i class="fa fa-facebook-square"></i> <a href="https://web.facebook.com/shopcircut/" title="">facebook</a></li>
-                                <li><i class="fa fa-twitter-square"></i><a href="https://twitter.com/login?lang=en" title="">twitter</a></li>
-                                <li><i class="fa fa-instagram"></i><a href="https://www.instagram.com/?hl=en" title="">instagram</a></li>
-                                <li><i class="fa fa-google-plus-square"></i> <a href="https://plus.google.com/discover" title="">Google+</a></li>
-                                <li><i class="fa fa-pinterest-square"></i> <a href="https://www.pinterest.com/" title="">Pintrest</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4">
-                        <div class="widget">
-                            <div class="widget-title">
-                                <h4>Navigate</h4>
-                            </div>
-                            <ul class="list-style">
-                                <li><a href="about.html" title="">about us</a></li>
-                                <li><a href="contact.html" title="">contact us</a></li>
-                                <li><a href="terms.html" title="">terms & Conditions</a></li>
-                                <li><a href="#" title="">RSS syndication</a></li>
-                                <li><a href="sitemap.html" title="">Sitemap</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4">
-                        <div class="widget">
-                            <div class="widget-title">
-                                <h4>useful links</h4>
-                            </div>
-                            <ul class="list-style">
-                                <li><a href="#" title="">leasing</a></li>
-                                <li><a href="#" title="">submit route</a></li>
-                                <li><a href="#" title="">how does it work?</a></li>
-                                <li><a href="#" title="">agent listings</a></li>
-                                <li><a href="#" title="">view All</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4">
-                        <div class="widget">
-                            <div class="widget-title">
-                                <h4>download apps</h4>
-                            </div>
-                            <ul class="colla-apps">
-                                <li><a href="https://play.google.com/store?hl=en" title=""><i class="fa fa-android"></i>android</a></li>
-                                <li><a href="https://www.apple.com/lae/ios/app-store/" title=""><i class="ti-apple"></i>iPhone</a></li>
-                                <li><a href="https://www.microsoft.com/store/apps" title=""><i class="fa fa-windows"></i>Windows</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    Looktook Inc. 2019 &copy;
                 </div>
             </div>
-        </footer><!-- footer -->
-        <div class="bottombar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <span class="copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
-                        <i><img src="images/credit-cards.png" alt=""></i>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="side-panel">
         <h4 class="panel-title">General Setting</h4>
