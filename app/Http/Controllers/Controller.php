@@ -14,6 +14,6 @@ class Controller extends BaseController
     private $user;
 
     public function __construct() {
-        $this->user = auth()->user()->profile;
+        $this->user = auth()->user();
     }
 }
