@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/feed', 'HomeController@feed');
+
+Route::post('/feed', 'HomeController@feed');

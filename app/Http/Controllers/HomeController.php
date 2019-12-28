@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
-
+use App\Post;
 class User_tmp {
     public $avatar = 'https://lh3.googleusercontent.com/-0dpgowxQJsk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdzmsG0vXTDn3aDUvBQCPxpRLENlg.CMID/s83-c/photo.jpg';
     public $name = "Лучший в мире за работой";
@@ -42,10 +43,25 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function feed()
+    public function feed(Request $request)
     {
+        if ($request->isMethod('post')) {
+            $post_content = $request->input('post_content');
+            if(!empty($post_content)) {
+                $post = new Post;
+                $post->content = $post_content;
+                $post->profile_id = Auth::id();
+                $post->save();
+            }
+        }
         $user = new User_tmp();
         $post = new Post_tmp($user);
-        return view('feed.feed', ['user' => $user, 'posts' => [$post]]);
+        $posts = Post::all();
+        foreach($posts as &$post)
+        {
+            $post->author = $user;
+            $post->attachment_photos = [];
+        }
+        return view('feed.feed', ['user' => $user, 'posts' => $posts]);
     }
 }
