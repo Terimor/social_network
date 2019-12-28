@@ -21,3 +21,5 @@ Route::get('/feed', 'HomeController@feed');
 Route::post('/feed', 'HomeController@feed');
 
 Route::get('/subscribes', 'HomeController@subscribes');
+
+Route::get('/communities', 'HomeController@communities');

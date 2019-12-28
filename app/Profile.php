@@ -10,6 +10,10 @@ class Profile extends Model
         'name', 'bio', 'avatar'
     ];
 
+    protected $attributes = [
+        'avatar' => 'https://avatarfiles.alphacoders.com/174/thumb-174752.jpg'
+    ];
+
     public function posts() {
         return $this->hasMany('App\Post');
     }
@@ -20,5 +24,9 @@ class Profile extends Model
 
     public function actions() {
         return $this->hasMany('App\Action');
+    }
+
+    public function user() {
+        return $this->belongsTo('App\User', 'user_id' ,'id');
     }
 }

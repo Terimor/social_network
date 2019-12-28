@@ -43,28 +43,13 @@
                 <ul>
                     <li><span>Home</span>
                         <ul>
-                            <li><a href="/feed" title="">news feed</a></li>
+                            <li><a href="{{ url('feed') }}" title="">news feed</a></li>
                         </ul>
                     </li>
                     <li><span>Social</span>
                         <ul>
-<<<<<<< HEAD
-                            <li><a href="time-line.html" title="">timeline</a></li>
-                            <li><a href="{{ url('subscribes') }}" title="">timeline friends</a></li>
-                            <li><a href="timeline-groups.html" title="">timeline groups</a></li>
-                            <li><a href="timeline-pages.html" title="">timeline pages</a></li>
-                            <li><a href="timeline-photos.html" title="">timeline photos</a></li>
-                            <li><a href="timeline-videos.html" title="">timeline videos</a></li>
-                            <li><a href="fav-page.html" title="">favourit page</a></li>
-                            <li><a href="groups.html" title="">groups page</a></li>
-                            <li><a href="page-likers.html" title="">Likes page</a></li>
-                            <li><a href="people-nearby.html" title="">people nearby</a></li>
-
-
-=======
-                            <li><a href="/friends" title="">friends</a></li>
+                            <li><a href="{{ url('subscribes') }}" title="">subscribes</a></li>
                             <li><a href="/communities" title="">communities</a></li>
->>>>>>> e1fc64e511b7c2e72463a97309c6d6a2b80b3265
                         </ul>
                     </li>
                     <li><span>Account Setting</span>
@@ -164,7 +149,7 @@
                     <li>
                         <a href="#" title="">Home</a>
                         <ul>
-                            <li><a href="/feed" title="">news feed</a></li>
+                            <li><a href="{{ url('feed') }}" title="">news feed</a></li>
                         </ul>
                     </li>
                     <li>
@@ -287,7 +272,7 @@
                                                 </li>
                                                 <li>
                                                     <i class="ti-user"></i>
-                                                    <a href="{{ url('subscribes') }}" title="">friends</a>
+                                                    <a href="{{ url('subscribes') }}" title="">Subscribes</a>
                                                 </li>
                                                 <li>
                                                     <i class="ti-bell"></i>

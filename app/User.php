@@ -10,8 +10,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
     public function profile() {
-        return $this->hasOne('App\Profile');
+        return $this->hasOne('App\Profile', 'user_id', 'id');
     }
 
     /**
@@ -22,10 +23,7 @@ class User extends Authenticatable
     protected $fillable = [
         'email', 'password',
     ];
-    
-    protected $attributes = [
-        'avatar' => 'https://avatarfiles.alphacoders.com/174/thumb-174752.jpg'
-    ];
+
     /**
      * The attributes that should be hidden for arrays.
      *

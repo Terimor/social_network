@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Profile;
 use App\Action;
+use App\UserRelation;
 
 class User_tmp {
     public $avatar = 'https://lh3.googleusercontent.com/-0dpgowxQJsk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdzmsG0vXTDn3aDUvBQCPxpRLENlg.CMID/s83-c/photo.jpg';
@@ -57,8 +58,9 @@ class HomeController extends Controller
                 $post->save();
             }
         }
+
         $posts = Post::orderBy('id', 'DESC')->get();
-        $user_profile = Profile::find(Auth::id());
+        $user_profile = Auth::user()->profile;
         foreach($posts as &$post)
         {
             $post->attachment_photos = [];
@@ -67,15 +69,17 @@ class HomeController extends Controller
     }
 
     public function subscribes(Request $request) {
-        $view_data['subscribes'] = Action::where([
+        $view_data['subscribes'] = UserRelation::where([
             'action' => 'subscribe',
-            'target' => $this->user->id,
-        ])->orderBy('id', 'desc')->limit(10)->get();
+            'target' => Auth::id(),
+        ])->orderBy('id', 'desc')->get();
 
-        $view_data['subscribes'] = Action::where([
+        $view_data['subscribers'] = UserRelation::where([
             'action' => 'subscribe',
-            'actor' => $this->user->id,
-        ])->orderBy('id', 'desc')->limit(10)->get();
+            'actor' => Auth::id(),
+        ])->orderBy('id', 'desc')->get();
+
+        $view_data['user'] = Auth::user()->profile;
 
         return view('subscribes.subscribes', $view_data);
     }
