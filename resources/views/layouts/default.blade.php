@@ -27,7 +27,7 @@
                     <a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
                 </span>
                 <span class="mh-text">
-                    <a href="newsfeed.html" title=""><img src="images/logo2.png" alt=""></a>
+                    <a href="/feed" title=""><img src="images/logo2.png" alt=""></a>
                 </span>
                 <span class="mh-btns-right">
                     <a class="fa fa-sliders" href="#shoppingbag"></a>
@@ -282,145 +282,49 @@
                     <li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
                     <li>
                         <a href="#" title="Notification" data-ripple="">
-                            <i class="ti-bell"></i><span>20</span>
+                            <i class="ti-bell"></i><span>1</span>
                         </a>
                         <div class="dropdowns">
-                            <span>4 New Notifications</span>
+                            <span>1 New Notifications</span>
                             <ul class="drops-menu">
                                 <li>
                                     <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-1.jpg" alt="">
+                                        <img src="https://vignette.wikia.nocookie.net/stalker/images/d/d1/%D0%A1%D0%B8%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87-%D1%82%D1%87.png/revision/latest?cb=20180530164054&path-prefix=ru" alt="">
                                         <div class="mesg-meta">
-                                            <h6>sarah Loren</h6>
-                                            <span>Hi, how r u dear ...?</span>
+                                            <h6>Сидорович</h6>
+                                            <span>Иди своей дорогой сталкер</span>
                                             <i>2 min ago</i>
                                         </div>
                                     </a>
                                     <span class="tag green">New</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-2.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Jhon doe</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag red">Reply</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-3.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Andrew</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag blue">Unseen</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-4.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Tom cruse</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag">New</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-5.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Amy</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag">New</span>
                                 </li>
                             </ul>
                             <a href="notifications.html" title="" class="more-mesg">view more</a>
                         </div>
                     </li>
                     <li>
-                        <a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
+                        <a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>1</span></a>
                         <div class="dropdowns">
-                            <span>5 New Messages</span>
+                            <span>1 New Messages</span>
                             <ul class="drops-menu">
                                 <li>
                                     <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-1.jpg" alt="">
+                                        <img src="https://vignette.wikia.nocookie.net/stalker/images/9/92/%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D0%BE%D0%BA.png/revision/latest?cb=20120207133647&path-prefix=ru" alt="">
                                         <div class="mesg-meta">
-                                            <h6>sarah Loren</h6>
-                                            <span>Hi, how r u dear ...?</span>
+                                            <h6>Стрелок</h6>
+                                            <span>Я не знаю, правильно я поступил или нет... Наверное, никогда не узнаю... Но я сделал выбор... Надеюсь, он был верным.</span>
                                             <i>2 min ago</i>
                                         </div>
                                     </a>
                                     <span class="tag green">New</span>
                                 </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-2.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Jhon doe</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag red">Reply</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-3.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Andrew</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag blue">Unseen</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-4.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Tom cruse</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag">New</span>
-                                </li>
-                                <li>
-                                    <a href="notifications.html" title="">
-                                        <img src="images/resources/thumb-5.jpg" alt="">
-                                        <div class="mesg-meta">
-                                            <h6>Amy</h6>
-                                            <span>Hi, how r u dear ...?</span>
-                                            <i>2 min ago</i>
-                                        </div>
-                                    </a>
-                                    <span class="tag">New</span>
-                                </li>
                             </ul>
                             <a href="messages.html" title="" class="more-mesg">view more</a>
                         </div>
                     </li>
-                    <li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
-                        <div class="dropdowns languages">
-                            <a href="#" title=""><i class="ti-check"></i>English</a>
-                            <a href="#" title="">Arabic</a>
-                            <a href="#" title="">Dutch</a>
-                            <a href="#" title="">French</a>
-                        </div>
-                    </li>
                 </ul>
                 <div class="user-img">
-                    <img src="{{ $user->avatar }}" alt="">
+                    <img src="{{ $user->avatar }}" alt="" width="60px">
                     <span class="status f-online"></span>
                     <div class="user-setting">
                         <a href="#" title=""><span class="status f-online"></span>online</a>
@@ -577,12 +481,11 @@
                                             <h4 class="widget-title">Your page</h4>
                                             <div class="your-page">
                                                 <figure>
-                                                    <a href="#" title=""><img src="{{$user->name}}" alt=""></a>
+                                                    <a href="#" title=""><img src="{{$user->avatar}}" alt=""></a>
                                                 </figure>
                                                 <div class="page-meta">
                                                     <a href="#" title="" class="underline">{{$user->name}}</a>
-                                                    <span><i class="ti-comment"></i><a href="insight.html" title="">Messages <em>9</em></a></span>
-                                                    <span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>2</em></a></span>
+                                                    <span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>0</em></a></span>
                                                 </div>
                                                 <div class="page-likes">
                                                     <ul class="nav nav-tabs likes-btn">
@@ -648,23 +551,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div><!-- page like widget -->
-                                        <div class="widget">
-                                            <div class="banner medium-opacity bluesh">
-                                                <div class="bg-image" style="background-image: url(images/resources/baner-widgetbg.jpg)"></div>
-                                                <div class="baner-top">
-                                                    <span><img alt="" src="images/book-icon.png"></span>
-                                                    <i class="fa fa-ellipsis-h"></i>
-                                                </div>
-                                                <div class="banermeta">
-                                                    <p>
-                                                        create your own favourit page.
-                                                    </p>
-                                                    <span>like them all</span>
-                                                    <a data-ripple="" title="" href="#">start now!</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div><!-- page like widget -->                                   
                                         <div class="widget friend-list stick-widget">
                                             <h4 class="widget-title">Friends</h4>
                                             <div id="searchDir"></div>
