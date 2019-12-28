@@ -420,7 +420,7 @@
                     </li>
                 </ul>
                 <div class="user-img">
-                    <img src="images/resources/admin.jpg" alt="">
+                    <img src="{{ $user->avatar }}" alt="">
                     <span class="status f-online"></span>
                     <div class="user-setting">
                         <a href="#" title=""><span class="status f-online"></span>online</a>
@@ -577,10 +577,10 @@
                                             <h4 class="widget-title">Your page</h4>
                                             <div class="your-page">
                                                 <figure>
-                                                    <a href="#" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
+                                                    <a href="#" title=""><img src="{{$user->name}}" alt=""></a>
                                                 </figure>
                                                 <div class="page-meta">
-                                                    <a href="#" title="" class="underline">My page</a>
+                                                    <a href="#" title="" class="underline">{{$user->name}}</a>
                                                     <span><i class="ti-comment"></i><a href="insight.html" title="">Messages <em>9</em></a></span>
                                                     <span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>2</em></a></span>
                                                 </div>
