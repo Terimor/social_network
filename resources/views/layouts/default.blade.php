@@ -18,128 +18,126 @@
 </head>
 
 <body>
-    <!--<div class="se-pre-con"></div>-->
-    <div class="theme-layout">
-
-        <div class="responsive-header">
-            <div class="mh-head first Sticky">
-                <span class="mh-btns-left">
-                    <a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
-                </span>
-                <span class="mh-text">
-                    <a href="/feed" title=""><img src="images/logo2.png" alt=""></a>
-                </span>
-                <span class="mh-btns-right">
-                    <a class="fa fa-sliders" href="#shoppingbag"></a>
-                </span>
-            </div>
-            <div class="mh-head second">
-                <form class="mh-form">
-                    <input placeholder="search" />
-                    <a href="#/" class="fa fa-search"></a>
+<div class="theme-layout">
+    <div class="responsive-header">
+    <div class="mh-head first Sticky">
+        <span class="mh-btns-left">
+            <a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
+        </span>
+        <span class="mh-text">
+            <a href="/feed" title=""><img src="images/logo2.png" alt=""></a>
+        </span>
+        <span class="mh-btns-right">
+            <a class="fa fa-sliders" href="#shoppingbag"></a>
+        </span>
+    </div>
+    <div class="mh-head second">
+        <form class="mh-form">
+            <input placeholder="search" />
+            <a href="#/" class="fa fa-search"></a>
+        </form>
+    </div>
+    <nav id="menu" class="res-menu">
+        <ul>
+            <li><span>Home</span>
+                <ul>
+                    <li><a href="/feed" title="">news feed</a></li>
+                </ul>
+            </li>
+            <li><span>Social</span>
+                <ul>
+                    <li><a href="/friends" title="">friends</a></li>
+                    <li><a href="/communities" title="">communities</a></li>
+                </ul>
+            </li>
+            <li><span>Account Setting</span>
+                <ul>
+                    <li><a href="create-fav-page.html" title="">edit profile</a></li>
+                    <li><a href="edit-account-setting.html" title="">edit account details</a></li>
+                    <li><a href="edit-interest.html" title="">security settings</a></li>
+                </ul>
+            </li>
+            <li><span>More pages</span>
+                <ul>
+                    <li><a href="careers.html" title="">Careers</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html" title="">about</a></li>
+            <li><a href="about-company.html" title="">About Us2</a></li>
+            <li><a href="contact.html" title="">contact</a></li>
+            <li><a href="contact-branches.html" title="">Contact Us2</a></li>
+            <li><a href="widgets.html" title="">Widgts</a></li>
+        </ul>
+    </nav>
+    <nav id="shoppingbag">
+        <div>
+            <div class="">
+                <form method="post">
+                    <div class="setting-row">
+                        <span>use night mode</span>
+                        <input type="checkbox" id="nightmode" />
+                        <label for="nightmode" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Notifications</span>
+                        <input type="checkbox" id="switch2" />
+                        <label for="switch2" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Notification sound</span>
+                        <input type="checkbox" id="switch3" />
+                        <label for="switch3" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>My profile</span>
+                        <input type="checkbox" id="switch4" />
+                        <label for="switch4" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Show profile</span>
+                        <input type="checkbox" id="switch5" />
+                        <label for="switch5" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                </form>
+                <h4 class="panel-title">Account Setting</h4>
+                <form method="post">
+                    <div class="setting-row">
+                        <span>Sub users</span>
+                        <input type="checkbox" id="switch6" />
+                        <label for="switch6" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>personal account</span>
+                        <input type="checkbox" id="switch7" />
+                        <label for="switch7" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Business account</span>
+                        <input type="checkbox" id="switch8" />
+                        <label for="switch8" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Show me online</span>
+                        <input type="checkbox" id="switch9" />
+                        <label for="switch9" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Delete history</span>
+                        <input type="checkbox" id="switch10" />
+                        <label for="switch10" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Expose author name</span>
+                        <input type="checkbox" id="switch11" />
+                        <label for="switch11" data-on-label="ON" data-off-label="OFF"></label>
+                    </div>
                 </form>
             </div>
-            <nav id="menu" class="res-menu">
-                <ul>
-                    <li><span>Home</span>
-                        <ul>
-                            <li><a href="{{ url('feed') }}" title="">news feed</a></li>
-                        </ul>
-                    </li>
-                    <li><span>Social</span>
-                        <ul>
-                            <li><a href="{{ url('subscribes') }}" title="">subscribes</a></li>
-                            <li><a href="/communities" title="">communities</a></li>
-                        </ul>
-                    </li>
-                    <li><span>Account Setting</span>
-                        <ul>
-                            <li><a href="create-fav-page.html" title="">edit profile</a></li>
-                            <li><a href="edit-account-setting.html" title="">edit account details</a></li>
-                            <li><a href="edit-interest.html" title="">security settings</a></li>
-                        </ul>
-                    </li>
-                    <li><span>More pages</span>
-                        <ul>
-                            <li><a href="careers.html" title="">Careers</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html" title="">about</a></li>
-                    <li><a href="about-company.html" title="">About Us2</a></li>
-                    <li><a href="contact.html" title="">contact</a></li>
-                    <li><a href="contact-branches.html" title="">Contact Us2</a></li>
-                    <li><a href="widgets.html" title="">Widgts</a></li>
-                </ul>
-            </nav>
-            <nav id="shoppingbag">
-                <div>
-                    <div class="">
-                        <form method="post">
-                            <div class="setting-row">
-                                <span>use night mode</span>
-                                <input type="checkbox" id="nightmode" />
-                                <label for="nightmode" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>Notifications</span>
-                                <input type="checkbox" id="switch2" />
-                                <label for="switch2" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>Notification sound</span>
-                                <input type="checkbox" id="switch3" />
-                                <label for="switch3" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>My profile</span>
-                                <input type="checkbox" id="switch4" />
-                                <label for="switch4" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>Show profile</span>
-                                <input type="checkbox" id="switch5" />
-                                <label for="switch5" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                        </form>
-                        <h4 class="panel-title">Account Setting</h4>
-                        <form method="post">
-                            <div class="setting-row">
-                                <span>Sub users</span>
-                                <input type="checkbox" id="switch6" />
-                                <label for="switch6" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>personal account</span>
-                                <input type="checkbox" id="switch7" />
-                                <label for="switch7" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>Business account</span>
-                                <input type="checkbox" id="switch8" />
-                                <label for="switch8" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>Show me online</span>
-                                <input type="checkbox" id="switch9" />
-                                <label for="switch9" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>Delete history</span>
-                                <input type="checkbox" id="switch10" />
-                                <label for="switch10" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                            <div class="setting-row">
-                                <span>Expose author name</span>
-                                <input type="checkbox" id="switch11" />
-                                <label for="switch11" data-on-label="ON" data-off-label="OFF"></label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </div><!-- responsive header -->
+        </div>
+    </nav>
+    </div><!-- responsive header -->
 
-        <div class="topbar stick">
+    <div class="topbar stick">
             <div class="logo">
                 <a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
             </div>
@@ -237,7 +235,6 @@
                         <a href="#" title=""><span class="status f-off"></span>offline</a>
                         <a href="#" title=""><i class="ti-user"></i> view profile</a>
                         <a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
-                        <a href="#" title=""><i class="ti-target"></i>activity log</a>
                         <a href="#" title=""><i class="ti-settings"></i>account setting</a>
 
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ti-power-off"></i>
@@ -250,8 +247,8 @@
                 <span class="ti-menu main-menu" data-ripple=""></span>
             </div>
         </div><!-- topbar -->
-
-        <section>
+</div>
+<section>
             <div class="gap gray-bg">
                 <div class="container-fluid">
                     <div class="row">
@@ -607,12 +604,11 @@
             </div>
         </section>
 
-            <div class="container">
-                <div class="row">
-                    Looktook Inc. 2019 &copy;
-                </div>
+        <div class="container">
+            <div class="row">
+                Looktook Inc. 2019 &copy;
             </div>
-    </div>
+        </div>
     <div class="side-panel">
         <h4 class="panel-title">General Setting</h4>
         <form method="post">

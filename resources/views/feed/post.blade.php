@@ -14,9 +14,7 @@
                     </p>
             </div>
             <div class="post-meta">
-                @foreach($post->attachment_photos as $photo)
-                <img src="{{ $photo }}" alt="">
-                @endforeach
+                
                 <div class="we-video-info">
                     <ul>
                         <li>
@@ -36,68 +34,44 @@
                                 <i class="ti-heart"></i>
                                 <ins>{{ $post->like_count }}</ins>
                             </span>
-                        </li>
-                        <li>
-                            <span class="dislike" data-toggle="tooltip" title="dislike">
-                                <i class="ti-heart-broken"></i>
-                                <ins>{{ $post->dislike_count }}</ins>
-                            </span>
-                        </li>
-                        @auth
-                        <li class="social-media">
-                            <div class="menu">
-                                <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
-                                <div class="rotater">
-                                    <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
-                                </div>
-                                <div class="rotater">
-                                    <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
-                                </div>
-                                <div class="rotater">
-                                    <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
-                                </div>
-                                <div class="rotater">
-                                    <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
-                                </div>
-                                <div class="rotater">
-                                    <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
-                                </div>
-                                <div class="rotater">
-                                    <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="rotater">
-                                    <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
-                                    </div>
-                                </div>
-                                <div class="rotater">
-                                    <div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                        @endauth
+                        </li>  
                     </ul>
                 </div>
             </div>
         </div>
-        @foreach ($post->comments as $comment)
-            <li>
-                <div class="comet-avatar">
-                    <img src="{{ $comment->author_avatar }}" alt="">
-                </div>
-                <div class="we-comment">
-                    <div class="coment-head">
-                        <h5><a href="time-line.html" title="">{{ $comment->profile->name }}</a></h5>
-                        <span>@php echo time_elapsed_string($comment->date_created); @endphp</span>
-                        @auth
-                        <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-                        @endauth
+        <div class="coment-area">
+            <ul class="we-comet">
+            @foreach ($post->comments as $comment)
+                <li>
+                    <div class="comet-avatar">
+                        <img src="{{ $comment->author_avatar }}" alt="">
                     </div>
-                    <p>{{ $comment->content }}</p>
-                </div>
-            </li>
-        @endforeach
+                    <div class="we-comment">
+                        <div class="coment-head">
+                            <h5><a href="time-line.html" title="">{{ $comment->profile->name }}</a></h5>
+                            <span>@php echo time_elapsed_string($comment->date_created); @endphp</span>
+                            @auth
+                            <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+                            @endauth
+                        </div>
+                        <p>{{ $comment->content }}</p>
+                    </div>
+                </li>
+            @endforeach
+                @auth
+                <li class="post-comment">
+                    <div class="comet-avatar">
+                        <img src="{{ $user->avatar }}" alt="">
+                    </div>
+                    <div class="post-comt-box">
+                        <form method="post">
+                            <textarea placeholder="Post your comment"></textarea>
+                            <button type="submit"></button>
+                        </form>	
+                    </div>
+                </li>
+                @endauth
+            </ul>
+        </div>
     </div>
 </div>
