@@ -8,6 +8,11 @@
                 <ins><a href="time-line.html" title="">{{ $post->author->name }}</a></ins>
                 <span>{{ $post->date_created }}</span>
             </div>
+            <div class="description">
+                    <p>
+                        {{ $post->content }}
+                    </p>
+            </div>
             <div class="post-meta">
                 @foreach($post->attachment_photos as $photo)
                 <img src="{{ $photo }}" alt="">
@@ -74,11 +79,6 @@
                         </li>
                         @endauth
                     </ul>
-                </div>
-                <div class="description">
-                    <p>
-                        {{ $post->content }}
-                    </p>
                 </div>
             </div>
         </div>
