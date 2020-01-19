@@ -14,8 +14,8 @@ class Controller extends BaseController
 
     public function __construct() {
         $this->middleware(function($request, $next) {
-            View::share('user', auth()->user());
             $this->user = auth()->user();
+            View::share('user', $this->user);
 
             return $next($request);
         });

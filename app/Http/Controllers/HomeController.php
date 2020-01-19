@@ -48,10 +48,12 @@ class HomeController extends Controller
                 $post->content = $post_content;
                 $post->profile_id = Auth::id();
                 $post->save();
+                return redirect();
             }
         }
 
         $posts = Post::orderBy('id', 'DESC')->get();
+
         foreach($posts as &$post)
         {
             $post->attachment_photos = [];

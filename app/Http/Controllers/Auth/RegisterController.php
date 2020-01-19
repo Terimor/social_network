@@ -72,7 +72,7 @@ class RegisterController extends Controller
         $user->save();
 
 
-        $profile = Profile::create([
+        Profile::create([
             'name' => $data['name'],
             'user_id' => $user->id
         ]);
