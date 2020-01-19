@@ -58,10 +58,11 @@
                         <img src="{{ $user->avatar }}" alt="">
                     </div>
                     <div class="post-comt-box">
-                        <form method="post">
+                        <form method="post" style="display: flex;">
                             <textarea placeholder="Post your comment"></textarea>
-                            <button type="submit"></button>
+                            <button type="submit" class = "post-comt-box-button" >Post</button>
                         </form>	
+                        
                     </div>
                 </li>
                 @endauth
