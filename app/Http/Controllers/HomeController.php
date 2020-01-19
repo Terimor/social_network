@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Profile;
 use App\Action;
+use App\Member;
 use App\UserRelation;
 
 class User_tmp {
@@ -82,5 +83,15 @@ class HomeController extends Controller
         $view_data['user'] = Auth::user()->profile;
 
         return view('subscribes.subscribes', $view_data);
+    }
+
+    public function communities(Request $request) {
+        $memberships = Member::where('user_id', Auth::id())->get();
+        $view_data['communities'] = array();
+        foreach($memberships as $membership) {
+            $view_data['communities'][] = $membership->community;
+        }
+
+        return view('communities.communities');
     }
 }
