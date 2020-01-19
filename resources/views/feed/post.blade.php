@@ -18,12 +18,6 @@
                 <div class="we-video-info">
                     <ul>
                         <li>
-                            <span class="views" data-toggle="tooltip" title="views">
-                                <i class="fa fa-eye"></i>
-                                <ins>{{ $post->view_count }}</ins>
-                            </span>
-                        </li>
-                        <li>
                             <span class="comment" data-toggle="tooltip" title="Comments">
                                 <i class="fa fa-comments-o"></i>
                                 <ins>{{ $post->comment_count }}</ins>

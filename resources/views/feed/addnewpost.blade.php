@@ -10,12 +10,7 @@
                 <textarea rows="2" placeholder="write something" name="post_content"></textarea>
                 <div class="attachments">
                     <ul>
-                        <li>
-                            <i class="fa fa-music"></i>
-                            <label class="fileContainer">
-                                <input type="file" name="attachment_music">
-                            </label>
-                        </li>
+                        
                         <li>
                             <i class="fa fa-image"></i>
                             <label class="fileContainer">
