@@ -2,7 +2,7 @@
 <div class="central-meta">
     <div class="new-postbox">
         <figure>
-            <img src="{{ $user->avatar }}" alt="">
+            <img src="{{ $user->profile->avatar }}" alt="">
         </figure>
         <div class="newpst-input">
             <form method="post">

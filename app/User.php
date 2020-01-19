@@ -25,10 +25,6 @@ class User extends Authenticatable
     ];
 
 
-    protected $attributes = [
-        'avatar' => '/images/defaul-avatar.png'
-    ];
-
     /**
      * The attributes that should be hidden for arrays.
      *
