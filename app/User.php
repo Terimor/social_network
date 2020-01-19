@@ -10,6 +10,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $with = [
+        'profile'
+    ];
 
     public function profile() {
         return $this->hasOne('App\Profile', 'user_id', 'id');

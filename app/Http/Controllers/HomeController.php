@@ -33,15 +33,6 @@ class Post_tmp {
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -61,12 +52,11 @@ class HomeController extends Controller
         }
 
         $posts = Post::orderBy('id', 'DESC')->get();
-        $user_profile = Auth::user()->profile;
         foreach($posts as &$post)
         {
             $post->attachment_photos = [];
         }
-        return view('feed.feed', ['user' => $user_profile, 'posts' => $posts]);
+        return view('feed.feed', ['posts' => $posts]);
     }
 
     public function subscribes(Request $request) {

@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/feed', 'HomeController@feed');
+
+Route::group([
+    'middleware' => 'auth'
+], function () {
+    Route::get('/feed', 'HomeController@feed');
 Route::get('/subscribes', 'HomeController@subscribes');
 
 Route::get('/communities', 'HomeController@communities');
@@ -28,4 +32,5 @@ Route::get('/friends/{id}', 'ProfileController@friends');
 Route::get('/communities/{id}', 'ProfileController@communities');
 Route::get('/about/{id}', 'ProfileController@about');
 Route::post('/feed', 'HomeController@feed');
+});
 
