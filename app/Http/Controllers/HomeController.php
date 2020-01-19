@@ -8,6 +8,7 @@ use App\Post;
 use App\Profile;
 use App\Action;
 use App\Member;
+use App\User;
 use App\UserRelation;
 
 class User_tmp {
@@ -48,7 +49,6 @@ class HomeController extends Controller
                 $post->content = $post_content;
                 $post->profile_id = Auth::id();
                 $post->save();
-                return redirect();
             }
         }
 
@@ -62,17 +62,18 @@ class HomeController extends Controller
     }
 
     public function subscribes(Request $request) {
-        $view_data['subscribes'] = UserRelation::where([
+        $subscribes = UserRelation::where([
             'action' => 'subscribe',
-            'target' => Auth::id(),
-        ])->orderBy('id', 'desc')->get();
+            'actor' => $this->user->id,
+        ])->pluck('target')->all();
 
-        $view_data['subscribers'] = UserRelation::where([
+        $subscribers = UserRelation::where([
             'action' => 'subscribe',
-            'actor' => Auth::id(),
-        ])->orderBy('id', 'desc')->get();
+            'target' => $this->user->id,
+        ])->pluck('actor')->all();
 
-        $view_data['user'] = Auth::user()->profile;
+        $view_data['subscribes'] = User::whereIn('id', $subscribes)->orderBy('id', 'DESC')->get();
+        $view_data['subscribers'] = User::whereIn('id', $subscribers)->orderBy('id', 'DESC')->get();
 
         return view('subscribes.subscribes', $view_data);
     }

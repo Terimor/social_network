@@ -24,7 +24,7 @@
                             </label>
                         </li>
                         <li>
-                            <button type="submit">Post</button>
+                            <button type="submit" onclick="this.disabled = true; $(this).closest('form').submit();">Post</button>
                         </li>
                     </ul>
                 </div>

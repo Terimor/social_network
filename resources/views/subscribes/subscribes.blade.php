@@ -1,4 +1,4 @@
-@extends('layouts.default');
+@extends('layouts.default')
 
 @section('content')
     <div class="central-meta">
@@ -13,7 +13,7 @@
               <div class="tab-pane active fade show " id="frends" >
                 <ul class="nearby-contct">
                     @foreach($subscribers as $subscriber)
-                    @include('subscibe',array_merge([$subsrcibe],['action' => 'Block']))
+                    @include('subscribes.subscribe',array_merge(['profile' => $subscriber->profile],['action' => 'Block']))
                     @endforeach
                 </ul>
                   <button class="btn-view btn-load-more"></button>
@@ -21,7 +21,7 @@
               <div class="tab-pane" id="frends-req">
                 <ul class="nearby-contct">
                     @foreach($subscribes as $subscribe)
-                    @include('subscibe',array_merge([$subsrcibe],['action' => 'Unsubscribe']))
+                    @include('subscribes.subscribe',array_merge(['profile' => $subscribe->profile],['action' => 'Unsubscribe']))
                     @endforeach
                 </ul>
                   <button class="btn-view btn-load-more"></button>
