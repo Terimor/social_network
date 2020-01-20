@@ -42,7 +42,7 @@
                     </div>
                     <div class="we-comment">
                         <div class="coment-head">
-                            <h5><a href="time-line.html" title="">{{ $comment->profile->name }}</a></h5>
+                            <h5><a href="/profile/{{ $comment->profile->id }}" title="">{{ $comment->profile->name }}</a></h5>
                             <span>@php echo time_elapsed_string($comment->date_created); @endphp</span>
                             @auth
                             <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="post-comt-box">
                         <form method="post" style="display: flex;">
-                            <textarea placeholder="Post your comment"></textarea>
+                            <textarea name="post_comment" placeholder="Post your comment"></textarea>
                             <button type="submit" class = "post-comt-box-button" >Post</button>
                         </form>	
                         
