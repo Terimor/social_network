@@ -10,6 +10,7 @@ use App\Action;
 use App\Member;
 use App\User;
 use App\UserRelation;
+use App\Comment;
 
 class User_tmp {
     public $avatar = 'https://lh3.googleusercontent.com/-0dpgowxQJsk/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rdzmsG0vXTDn3aDUvBQCPxpRLENlg.CMID/s83-c/photo.jpg';
@@ -44,16 +45,21 @@ class HomeController extends Controller
     {
         if ($request->isMethod('post')) {
             $post_content = $request->input('post_content');
-            $comment_content = $request->input('comment_content');
             if(!empty($post_content)) {
                 $post = new Post;
                 $post->content = $post_content;
                 $post->profile_id = Auth::id();
                 $post->save();
             }
+            $comment_content = $request->input('comment_content');
             if(!empty($comment_content))
             {
-                
+                $post_id = $request->input('post_id');
+                $comment = new Comment;
+                $comment->post_id = $post_id;
+                $comment->user_id = Auth::id();
+                $comment->content = $comment_content;
+                $comment->save(); 
             }
         }
 

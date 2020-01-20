@@ -60,6 +60,7 @@
                     <div class="post-comt-box">
                         <form method="post" style="display: flex;">
                             <textarea name="post_comment" placeholder="Post your comment"></textarea>
+                            <input type="hidden" name="post_id" value="{{$post->id}}">
                             <button type="submit" class = "post-comt-box-button" >Post</button>
                         </form>	
                         
