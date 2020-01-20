@@ -5,7 +5,7 @@
                 <img src="{{ $post->profile->avatar }}" alt="">
             </figure>
             <div class="friend-name">
-                <ins><a href="time-line.html" title="">{{ $post->profile->name }}</a></ins>
+                <ins><a href="/profile/{{ $post->profile->id }}" title="">{{ $post->profile->name }}</a></ins>
                 <span>{{ $post->date_created }}</span>
             </div>
             <div class="description">

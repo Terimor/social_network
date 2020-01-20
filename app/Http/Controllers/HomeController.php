@@ -44,11 +44,16 @@ class HomeController extends Controller
     {
         if ($request->isMethod('post')) {
             $post_content = $request->input('post_content');
+            $comment_content = $request->input('comment_content');
             if(!empty($post_content)) {
                 $post = new Post;
                 $post->content = $post_content;
                 $post->profile_id = Auth::id();
                 $post->save();
+            }
+            if(!empty($comment_content))
+            {
+                
             }
         }
 

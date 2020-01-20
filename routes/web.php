@@ -32,5 +32,6 @@ Route::group([
     Route::get('/communities/{id}', 'ProfileController@communities');
     Route::get('/about/{id}', 'ProfileController@about');
     Route::post('/feed', 'HomeController@feed');
+    Route::post('/profile', 'ProfileController@profile');
 });
 

@@ -11,6 +11,15 @@ class ProfileController extends Controller
 {
     public function profile(Request $request, $id = null)
     {
+        if ($request->isMethod('post')) {
+            $post_content = $request->input('post_content');
+            if(!empty($post_content)) {
+                $post = new Post;
+                $post->content = $post_content;
+                $post->profile_id = Auth::id();
+                $post->save();
+            }
+        }
         $current_user = Profile::find($id ?? Auth::id());
         $posts = $current_user->posts()->orderBy('id', 'DESC')->get();
         return view('profile/profile', ['posts' => $posts, 'current_user' => $current_user]);
