@@ -42,7 +42,7 @@
                     </div>
                     <div class="we-comment">
                         <div class="coment-head">
-                            <h5><a href="/profile/{{ $comment->profile->id }}" title="">{{ $comment->profile->name }}</a></h5>
+                            <h5><a href="/profile/{{ $comment->user_id }}" title="">{{ $comment->profile->name }}</a></h5>
                             <span>@php echo time_elapsed_string($comment->date_created); @endphp</span>
                             @auth
                             <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
