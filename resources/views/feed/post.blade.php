@@ -38,14 +38,14 @@
             @foreach ($post->comments as $comment)
                 <li>
                     <div class="comet-avatar">
-                        <img src="{{ $comment->author_avatar }}" alt="">
+                        <img src="{{ $comment->user->avatar }}" alt="">
                     </div>
                     <div class="we-comment">
                         <div class="coment-head">
-                            <h5><a href="/profile/{{ $comment->user_id }}" title="">{{ $comment->profile->name }}</a></h5>
+                            <h5><a href="/profile/{{ $comment->user_id }}" title="">{{ $comment->user->name }}</a></h5>
                             <span>@php echo time_elapsed_string($comment->date_created); @endphp</span>
                             @auth
-                            <a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+                            <a class="we-reply" href="#" title="Reply" onclick="reply(event, {{ $comment->user->id }}, {{ $post->id }})"><i class="fa fa-reply"></i></a>
                             @endauth
                         </div>
                         <p>{{ $comment->content }}</p>
@@ -60,7 +60,7 @@
                     <div class="post-comt-box">
                         <form method="post" style="display: flex;">
                             @csrf
-                            <textarea name="post_comment" placeholder="Post your comment"></textarea>
+                            <textarea name="post_comment" placeholder="Post your comment" id="comment_post_{{ $post->id }}"></textarea>
                             <input type="hidden" name="post_id" value="{{$post->id}}">
                             <button type="submit" class = "post-comt-box-button" >Post</button>
                         </form>	

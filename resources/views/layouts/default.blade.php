@@ -14,7 +14,35 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script>
+        function reply(e, user_id, post_id)
+        {
+            var element = document.getElementById("comment_post_" + post_id);
+            element.value = "@" + user_id + " ";
+            element.focus();
+            window.scrollBy({ 
+                top: element.getBoundingClientRect().y - 200,
+                behavior: 'smooth' 
+            });
+            e.preventDefault();
+        }
+        const scrollTo = (yPos, duration = 600) => {
+            const startY = window.scrollY;
+            const difference = yPos - startY;
+            const startTime = performance.now();
 
+            const step = () => {
+                const progress = (performance.now() - startTime) / duration;
+                const amount = easeOutCubic(progress);
+                window.scrollTo({ top: startY + amount * difference });
+                if (progress < 0.99) {
+                window.requestAnimationFrame(step);
+                }
+            };
+            step();
+        }
+        const easeOutCubic = t => --t * t * t + 1;
+    </script>
 </head>
 
 <body>
