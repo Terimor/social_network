@@ -9,17 +9,11 @@ use App\Profile;
 
 class ProfileController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function profile(Request $request, $id = null)
     {
-        $profile = Profile::find($id ?? Auth::id());
-        $posts = $profile->posts()->orderBy('id', 'DESC')->get();
-        return view('profile/profile', ['posts' => $posts, 'profile' => $profile]);
+        $current_user = Profile::find($id ?? Auth::id());
+        $posts = $current_user->posts()->orderBy('id', 'DESC')->get();
+        return view('profile/profile', ['posts' => $posts, 'current_user' => $current_user]);
     }
 
     public function about(Request $request, $id = null)

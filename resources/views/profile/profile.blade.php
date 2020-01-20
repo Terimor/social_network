@@ -19,7 +19,7 @@
 					<div class="col-lg-2 col-sm-3">
 						<div class="user-avatar">
 							<figure>
-								<img src="{{ $user->avatar }}" alt="">
+								<img src="{{ $current_user->avatar }}" alt="">
 								<form class="edit-phto">
 									<i class="fa fa-camera-retro"></i>
 									<label class="fileContainer">
@@ -34,14 +34,14 @@
 						<div class="timeline-info">
 							<ul>
 								<li class="admin-name">
-								  <h5>{{ $user->name }}</h5>
+								  <h5>{{ $current_user->name }}</h5>
 								  <span>Member</span>
 								</li>
 								<li>
-									<a class="active" href="/profile/{{ $user->id }}" title="" data-ripple="">Feed</a>
-									<a class="" href="/friends/{{ $user->id }}" title="" data-ripple="">Friends</a>
-									<a class="" href="/communities/{{ $user->id }}" title="" data-ripple="">Communities</a>
-									<a class="" href="/about/{{ $user->id }}" title="" data-ripple="">about</a>
+									<a class="active" href="/profile/{{ $current_user->id }}" title="" data-ripple="">Feed</a>
+									<a class="" href="/friends/{{ $current_user->id }}" title="" data-ripple="">Friends</a>
+									<a class="" href="/communities/{{ $current_user->id }}" title="" data-ripple="">Communities</a>
+									<a class="" href="/about/{{ $current_user->id }}" title="" data-ripple="">about</a>
 								</li>
 							</ul>
 						</div>
@@ -157,7 +157,7 @@
 									<div class="central-meta item">
 										<div class="new-postbox">
 											<figure>
-												<img src="{{ $user->avatar }}" alt="">
+												<img src="{{ $current_user->avatar }}" alt="">
 											</figure>
 											<div class="newpst-input">
 												<form method="post">
