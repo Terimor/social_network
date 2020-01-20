@@ -51,7 +51,7 @@ class HomeController extends Controller
                 $post->profile_id = Auth::id();
                 $post->save();
             }
-            $comment_content = $request->input('comment_content');
+            $comment_content = $request->input('post_comment');
             if(!empty($comment_content))
             {
                 $post_id = $request->input('post_id');
