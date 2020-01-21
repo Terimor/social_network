@@ -32,9 +32,9 @@
             var element = document.getElementById("post_like_counter_" + post_id);
             xhr = new XMLHttpRequest();
             if (like_icon.classList.contains('ti-heart')) {
-                xhr.open('POST', '/public/feed/like');
+                xhr.open('POST', '/feed/like');
             } else {
-                xhr.open('POST', '/public/feed/unlike');
+                xhr.open('POST', '/feed/unlike');
             }
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onload = function() {
