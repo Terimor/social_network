@@ -18,7 +18,7 @@
                 <div class="we-video-info">
                     <ul>
                         <li>
-                            <span class="comment" data-toggle="tooltip" title="Comments">
+                            <span class="comment" title="Comments" data-toggle="collapse" data-target=".collapse.post_comments_{{$post->id}}" data-text="Collapse">
                                 <i class="fa fa-comments-o"></i>
                                 <ins>{{ count($post->comments) }}</ins>
                             </span>
@@ -46,6 +46,7 @@
         </div>
         <div class="coment-area">
             <ul class="we-comet">
+            <ul class="we-comet collapse post_comments_{{$post->id}}">
             @foreach ($post->comments as $comment)
                 <li>
                     <div class="comet-avatar">
@@ -63,6 +64,7 @@
                     </div>
                 </li>
             @endforeach
+            </ul>
                 @auth
                 <li class="post-comment">
                     <div class="comet-avatar">

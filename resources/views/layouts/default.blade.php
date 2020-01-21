@@ -14,6 +14,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .collapse {
+            display: block;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        }
+        .collapse.show {
+            max-height: 99em;
+            transition: max-height 0.5s ease-in-out;
+        }
+ 
+    </style>
     <script>
         function reply(e, user_id, post_id)
         {
@@ -70,7 +83,28 @@
             }
             return encodedString;
         }
+        const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 
+        window.addEventListener('click', (ev) => {
+            const elm = ev.target;
+            if (triggers.includes(elm)) {
+                const selector = elm.getAttribute('data-target');
+                collapse(selector, 'toggle');
+            }
+        }, false);
+
+
+        const fnmap = {
+            'toggle': 'toggle',
+            'show': 'add',
+            'hide': 'remove'
+        };
+        const collapse = (selector, cmd) => {
+            const targets = Array.from(document.querySelectorAll(selector));
+            targets.forEach(target => {
+                target.classList[fnmap[cmd]]('show');
+            });
+        }
     </script>
 </head>
 
