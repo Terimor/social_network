@@ -4,8 +4,16 @@
 		<div class="feature-photo">
 			<figure><img src="/images/resources/timeline-1.jpg" alt=""></figure>
 			<div class="add-btn">
-				<span>1205 followers</span>
-				<a href="#" title="" data-ripple="">Add Friend</a>
+                <span>{{$subscribers_amount}} followers</span>
+                @if($user)
+                    @if($user->id !== $current_user->user_id)
+                        @if(\App\UserRelation::checkRelation($user->id, $current_user->user_id, 'subscribe'))
+                            <a href="{{url("profile/$current_user->user_id/unfollow")}}" title="" data-ripple="">Unfollow</a>
+                        @else
+                            <a href="{{url("profile/$current_user->user_id/subscribe")}}" title="" data-ripple="">Subscribe</a>
+                        @endif
+                    @endif
+                @endif
 			</div>
 			<form class="edit-phto">
 				<i class="fa fa-camera-retro"></i>
@@ -244,7 +252,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="/images/resources/friend-avatar5.jpg" alt="">
 													<span class="status f-online"></span>
@@ -255,7 +263,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="/images/resources/friend-avatar6.jpg" alt="">
 													<span class="status f-away"></span>
@@ -266,7 +274,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="/images/resources/friend-avatar7.jpg" alt="">
 													<span class="status f-off"></span>
@@ -277,7 +285,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="/images/resources/friend-avatar5.jpg" alt="">
 													<span class="status f-online"></span>
@@ -288,7 +296,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="/images/resources/friend-avatar2.jpg" alt="">
 													<span class="status f-away"></span>
@@ -347,11 +355,11 @@
 									</div><!-- friends list sidebar -->
 								</aside>
 							</div><!-- sidebar -->
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
     </section>
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="/js/script.js"></script>

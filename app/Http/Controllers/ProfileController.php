@@ -6,6 +6,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Profile;
+use App\UserRelation;
 
 class ProfileController extends Controller
 {
@@ -21,8 +22,9 @@ class ProfileController extends Controller
             }
         }
         $current_user = Profile::find($id ?? Auth::id());
+        $subscribers_amount = UserRelation::getSubscribersAmount($current_user->user_id);
         $posts = $current_user->posts()->orderBy('id', 'DESC')->get();
-        return view('profile/profile', ['posts' => $posts, 'current_user' => $current_user]);
+        return view('profile/profile', ['posts' => $posts, 'current_user' => $current_user, 'subscribers_amount' => $subscribers_amount]);
     }
 
     public function about(Request $request, $id = null)

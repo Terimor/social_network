@@ -236,8 +236,8 @@
                         <a href="#" title=""><i class="ti-user"></i> view profile</a>
                         <a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
                         <a href="#" title=""><i class="ti-settings"></i>account setting</a>
-                        
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ti-power-off"></i> 
+
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ti-power-off"></i>
                                         log out</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

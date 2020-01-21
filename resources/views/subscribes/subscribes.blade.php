@@ -13,7 +13,7 @@
               <div class="tab-pane active fade show " id="frends" >
                 <ul class="nearby-contct">
                     @foreach($subscribers as $subscriber)
-                    @include('subscribes.subscribe',array_merge(['profile' => $subscriber->profile],['action' => 'Block']))
+                    @include('subscribes.subscribe',['profile' => $subscriber->profile, 'href' => '#', 'action' => 'Block'])
                     @endforeach
                 </ul>
                   <button class="btn-view btn-load-more"></button>
@@ -21,7 +21,7 @@
               <div class="tab-pane" id="frends-req">
                 <ul class="nearby-contct">
                     @foreach($subscribes as $subscribe)
-                    @include('subscribes.subscribe',array_merge(['profile' => $subscribe->profile],['action' => 'Unsubscribe']))
+                    @include('subscribes.subscribe', ['profile' => $subscribe->profile, 'href' => url("profile/$subscribe->id/unfollow"), 'action' => 'Unfollow'])
                     @endforeach
                 </ul>
                   <button class="btn-view btn-load-more"></button>

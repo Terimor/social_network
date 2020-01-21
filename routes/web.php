@@ -33,5 +33,8 @@ Route::group([
     Route::get('/about/{id}', 'ProfileController@about');
     Route::post('/feed', 'HomeController@feed');
     Route::post('/profile', 'ProfileController@profile');
+
+    Route::get('/profile/{user_id}/subscribe', 'UserRelationController@subscribe');
+    Route::get('/profile/{user_id}/unfollow', 'UserRelationController@unfollow');
 });
 
