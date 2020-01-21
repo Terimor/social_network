@@ -46,7 +46,7 @@ class HomeController extends Controller
         if($request->isMethod('post'))
         {
             $post_id = $request->input('post_id');
-            if(Action::where('user_id', Auth::id())->where('post_id', $post_id))
+            if(count(Action::where('user_id', Auth::id())->where('post_id', $post_id)->get()))
             {
                 return response('was already liked', 200)
                   ->header('Content-Type', 'text/plain'); 

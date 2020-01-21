@@ -39,12 +39,11 @@
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onload = function() {
                 if (xhr.status === 200) {
-                    
-                    if (like_icon.classList.contains('ti-heart')) {
+                    if (responseText = "liked") {
                         like_icon.classList.remove('ti-heart');
                         like_icon.classList.add('ti-heart-broken');
                         element.innerHTML = parseInt(element.innerHTML) + 1;
-                    } else {
+                    } else if(responseText = "unliked") {
                         like_icon.classList.remove('ti-heart-broken');
                         like_icon.classList.add('ti-heart');
                         element.innerHTML = parseInt(element.innerHTML) - 1;
