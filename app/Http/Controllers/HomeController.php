@@ -49,7 +49,7 @@ class HomeController extends Controller
             if(Action::where('user_id', Auth::id())->where('post_id', $post_id))
             {
                 return response('was already liked', 200)
-                  ->header('Content-Type', 'text/plain'); 
+                  ->header('Content-Type', 'text/plain');
             }
             if(isset($post_id))
             {
@@ -59,7 +59,7 @@ class HomeController extends Controller
                 $action->user_id = Auth::id();
                 $action->save();
                 return response('liked', 200)
-                  ->header('Content-Type', 'text/plain'); 
+                  ->header('Content-Type', 'text/plain');
             }
         }
     }
@@ -73,7 +73,7 @@ class HomeController extends Controller
             {
                 Action::where('user_id', Auth::id())->where('post_id', $post_id)->delete();
                 return response('unliked', 200)
-                  ->header('Content-Type', 'text/plain'); 
+                  ->header('Content-Type', 'text/plain');
             }
         }
     }
@@ -96,12 +96,16 @@ class HomeController extends Controller
                 $comment->post_id = $post_id;
                 $comment->user_id = Auth::id();
                 $comment->content = $comment_content;
-                $comment->save(); 
+                $comment->save();
             }
             return redirect('/feed');
         }
 
-        $posts = Post::orderBy('id', 'DESC')->get();
+        $subscribes = $this->user->subscribes(true);
+
+        $posts = Post::whereHas('profile', function($query) use ($subscribes) {
+            $query->whereIn('user_id', array_merge($subscribes, [$this->user->id]));
+        })->orderBy('id', 'DESC')->get();
 
         foreach($posts as &$post)
         {

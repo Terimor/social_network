@@ -45,4 +45,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function subscribes($only_ids = false) {
+        $subscribes = UserRelation::where('actor', $this->id)->pluck('target')->all();
+        $query = self::whereIn('id', $subscribes);
+        if($only_ids) {
+            return $query->pluck('id')->all();
+        }
+        return $query->get();
+    }
 }
