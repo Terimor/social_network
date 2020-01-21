@@ -20,13 +20,24 @@
                         <li>
                             <span class="comment" data-toggle="tooltip" title="Comments">
                                 <i class="fa fa-comments-o"></i>
-                                <ins>{{ $post->comment_count }}</ins>
+                                <ins>{{ count($post->comments) }}</ins>
                             </span>
                         </li>
                         <li>
-                            <span class="like" data-toggle="tooltip" title="like">
-                                <i class="ti-heart"></i>
-                                <ins>{{ $post->like_count }}</ins>
+                                <?php
+                                    $is_liked = false;
+                                    foreach($post->actions as $action)
+                                    {
+                                        if($action->user_id == Auth::id())
+                                        {
+                                            $is_liked = true;
+                                            break;
+                                        }
+                                    }
+                                ?>
+                            <span class="like" data-toggle="tooltip" title="{{$is_liked ? 'unlike' : 'like'}}" onclick="send_like({{$post->id}})">
+                                <i class="{{$is_liked ? 'ti-heart-broken' : 'ti-heart'}}" id="post_like_icon_{{$post->id}}"></i>
+                                <ins id="post_like_counter_{{$post->id}}">{{ count($post->actions) }}</ins>
                             </span>
                         </li>  
                     </ul>
