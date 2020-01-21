@@ -20,6 +20,17 @@ class ProfileController extends Controller
                 $post->profile_id = Auth::id();
                 $post->save();
             }
+            $comment_content = $request->input('post_comment');
+            if(!empty($comment_content))
+            {
+                $post_id = $request->input('post_id');
+                $comment = new Comment;
+                $comment->post_id = $post_id;
+                $comment->user_id = Auth::id();
+                $comment->content = $comment_content;
+                $comment->save(); 
+            }
+            return redirect('/feed');
         }
         $current_user = Profile::find($id ?? Auth::id());
         $subscribers_amount = UserRelation::getSubscribersAmount($current_user->user_id);

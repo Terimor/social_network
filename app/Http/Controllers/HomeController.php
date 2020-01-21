@@ -41,6 +41,43 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function like(Request $request)
+    {
+        if($request->isMethod('post'))
+        {
+            $post_id = $request->input('post_id');
+            if(Action::where('user_id', Auth::id())->where('post_id', $post_id))
+            {
+                return response('was already liked', 200)
+                  ->header('Content-Type', 'text/plain'); 
+            }
+            if(isset($post_id))
+            {
+                $action = new Action;
+                $action->action_type = 'like';
+                $action->post_id = $post_id;
+                $action->user_id = Auth::id();
+                $action->save();
+                return response('liked', 200)
+                  ->header('Content-Type', 'text/plain'); 
+            }
+        }
+    }
+
+    public function unlike(Request $request)
+    {
+        if($request->isMethod('post'))
+        {
+            $post_id = $request->input('post_id');
+            if(isset($post_id))
+            {
+                Action::where('user_id', Auth::id())->where('post_id', $post_id)->delete();
+                return response('unliked', 200)
+                  ->header('Content-Type', 'text/plain'); 
+            }
+        }
+    }
+
     public function feed(Request $request)
     {
         if ($request->isMethod('post')) {
@@ -61,6 +98,7 @@ class HomeController extends Controller
                 $comment->content = $comment_content;
                 $comment->save(); 
             }
+            return redirect('/feed');
         }
 
         $posts = Post::orderBy('id', 'DESC')->get();

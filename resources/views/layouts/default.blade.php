@@ -26,22 +26,52 @@
             });
             e.preventDefault();
         }
-        const scrollTo = (yPos, duration = 600) => {
-            const startY = window.scrollY;
-            const difference = yPos - startY;
-            const startTime = performance.now();
-
-            const step = () => {
-                const progress = (performance.now() - startTime) / duration;
-                const amount = easeOutCubic(progress);
-                window.scrollTo({ top: startY + amount * difference });
-                if (progress < 0.99) {
-                window.requestAnimationFrame(step);
+        function send_like(post_id)
+        {
+            var like_icon = document.getElementById("post_like_icon_" + post_id);
+            var element = document.getElementById("post_like_counter_" + post_id);
+            xhr = new XMLHttpRequest();
+            if (like_icon.classList.contains('ti-heart')) {
+                xhr.open('POST', '/public/feed/like');
+            } else {
+                xhr.open('POST', '/public/feed/unlike');
+            }
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    
+                    if (like_icon.classList.contains('ti-heart')) {
+                        like_icon.classList.remove('ti-heart');
+                        like_icon.classList.add('ti-heart-broken');
+                        element.innerHTML = parseInt(element.innerHTML) + 1;
+                    } else {
+                        like_icon.classList.remove('ti-heart-broken');
+                        like_icon.classList.add('ti-heart');
+                        element.innerHTML = parseInt(element.innerHTML) - 1;
+                    }
+                }
+                else if (xhr.status !== 200) {
+                    
                 }
             };
-            step();
+            xhr.send(param({
+                'post_id' : post_id,
+                '_token' : '{{ csrf_token() }}'
+            }));
         }
-        const easeOutCubic = t => --t * t * t + 1;
+        function param(object) {
+            var encodedString = '';
+            for (var prop in object) {
+                if (object.hasOwnProperty(prop)) {
+                    if (encodedString.length > 0) {
+                        encodedString += '&';
+                    }
+                    encodedString += encodeURI(prop + '=' + object[prop]);
+                }
+            }
+            return encodedString;
+        }
+
     </script>
 </head>
 

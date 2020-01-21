@@ -32,6 +32,8 @@ Route::group([
     Route::get('/communities/{id}', 'ProfileController@communities');
     Route::get('/about/{id}', 'ProfileController@about');
     Route::post('/feed', 'HomeController@feed');
+    Route::post('/feed/like', 'HomeController@like');
+    Route::post('/feed/unlike', 'HomeController@unlike');
     Route::post('/profile', 'ProfileController@profile');
 
     Route::get('/profile/{user_id}/subscribe', 'UserRelationController@subscribe');
